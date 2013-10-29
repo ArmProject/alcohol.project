@@ -133,10 +133,13 @@ public class PointFactory {
 		float blue = rnd.nextFloat();
 		rec.setColor(new Color(red, green, blue));
 
-		String ch = i + "";
+		String ch = (i + 1) + "";
 		TextOptions option = new TextOptions(HorizontalAlign.CENTER);
 		Text text = new Text(0, 0, ResourceManager.getInstance().getFont(), ch,
 				option, vbo);
+		text.setPosition((rec.getWidth() - text.getWidth()) / 2,
+				(rec.getHeight() - text.getHeight()) / 2);
+
 		rec.attachChild(text);
 		if (isSeed) {
 			start = rec;
@@ -154,10 +157,11 @@ public class PointFactory {
 
 		line = new Line(x1, y1, x2, y2, vbo);
 		line.setColor(Color.BLACK);
-		line.setLineWidth(5);
-		line.setZIndex(1);
-
+		line.setLineWidth(8);
 		scene.attachChild(line);
+
+		line.setZIndex(-10);
+		scene.sortChildren();
 	}
 
 }
