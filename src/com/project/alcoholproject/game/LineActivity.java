@@ -39,12 +39,12 @@ public class LineActivity extends BaseGameActivity {
 	public void onCreateResources(
 			OnCreateResourcesCallback pOnCreateResourcesCallback)
 			throws Exception {
-		float size = 30;
+		float size = 40;
 		ResourceManager res = new ResourceManager(
 				this.getVertexBufferObjectManager());
-		res.setFont(FontFactory.create(this.getFontManager(),
-				this.getTextureManager(), 256, 256, Typeface.DEFAULT, size,
-				true));
+		res.setFont(FontFactory.createFromAsset(this.getFontManager(),
+				this.getTextureManager(), 256, 256, this.getAssets(),
+				"font/droid.ttf", size, true, android.graphics.Color.WHITE));
 
 		pOnCreateResourcesCallback.onCreateResourcesFinished();
 	}
@@ -57,8 +57,8 @@ public class LineActivity extends BaseGameActivity {
 		scene.setBackground(new Background(Color.WHITE));
 
 		int n = 16;
-		int d = 8;
-		
+		int d = 4;
+
 		final Algorithm algo = new Algorithm(d, n);
 
 		final PointFactory factory = new PointFactory(scene);
@@ -69,9 +69,9 @@ public class LineActivity extends BaseGameActivity {
 				int index = (Integer) obj;
 				// Log.e("aaa", index + "");
 				boolean stat = algo.check(index);
-//				Log.e("bbb", stat + "");
+				// Log.e("bbb", stat + "");
 				if (!stat) {
-					factory.finish();					
+					factory.finish();
 				} else {
 					algo.set(index);
 				}

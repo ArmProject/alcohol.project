@@ -7,7 +7,6 @@ import android.R.integer;
 import android.util.Log;
 
 public class Algorithm {
-	// ArrayList<Integer> row[];
 	Row row[];
 	int n, d;
 	int current = 0;
@@ -22,23 +21,17 @@ public class Algorithm {
 	}
 
 	public int[] getData() {
-		// ArrayList<Integer> data = new ArrayList<Integer>();
 		int data[] = new int[d * n];
 		for (int i = 0; i < d; i++) {
-			// data.addAll(row[i].data);
 			for (int j = 0; j < n; j++) {
 				data[i * d + j] = row[i].data.get(j);
 			}
 		}
-		// return (Integer[]) data.toArray();
 		return data;
 	}
 
 	public void set(int i) {
 		current = i;
-		if (i == n) {
-			isWin = true;
-		}
 	}
 
 	public boolean isWin() {
@@ -46,7 +39,10 @@ public class Algorithm {
 	}
 
 	public boolean check(int i) {
-		return i == current + 1 || i == current;
+		if (i == n - 1) {
+			isWin = true;
+		}
+		return (i == current + 1 || i == current) && !isWin;
 		// for (int i = 0; i < row.length; i++) {
 		// String msg = "";
 		// for (int arr : row[i].data) {
