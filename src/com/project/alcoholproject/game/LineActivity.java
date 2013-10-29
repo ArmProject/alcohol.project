@@ -11,9 +11,12 @@ import org.andengine.entity.scene.background.Background;
 import org.andengine.opengl.font.FontFactory;
 import org.andengine.opengl.vbo.VertexBufferObjectManager;
 import org.andengine.ui.activity.BaseGameActivity;
+import org.andengine.util.call.Callback;
 import org.andengine.util.color.Color;
 
 import android.graphics.Typeface;
+import android.util.Log;
+import android.widget.Toast;
 
 public class LineActivity extends BaseGameActivity {
 	private static final int CAMERA_WIDTH = 800;
@@ -36,11 +39,12 @@ public class LineActivity extends BaseGameActivity {
 	public void onCreateResources(
 			OnCreateResourcesCallback pOnCreateResourcesCallback)
 			throws Exception {
-		float size = 20;
+		float size = 30;
 		ResourceManager res = new ResourceManager(
 				this.getVertexBufferObjectManager());
 		res.setFont(FontFactory.create(this.getFontManager(),
-				this.getTextureManager(), 256, 256, Typeface.DEFAULT, size));
+				this.getTextureManager(), 256, 256, Typeface.DEFAULT, size,
+				true));
 
 		pOnCreateResourcesCallback.onCreateResourcesFinished();
 	}
@@ -52,8 +56,28 @@ public class LineActivity extends BaseGameActivity {
 		Scene scene = new Scene();
 		scene.setBackground(new Background(Color.WHITE));
 
-		PointFactory factory = new PointFactory(scene);
-		factory.random(10, CAMERA_WIDTH, CAMERA_HEIGHT);
+		int n = 16;
+		int d = 8;
+		
+		final Algorithm algo = new Algorithm(d, n);
+
+		final PointFactory factory = new PointFactory(scene);
+
+		factory.random(algo.getData(), d, n, CAMERA_WIDTH, CAMERA_HEIGHT);
+		factory.setOnTop(new Callback<Object>() {
+			public void onCallback(Object obj) {
+				int index = (Integer) obj;
+				// Log.e("aaa", index + "");
+				boolean stat = algo.check(index);
+//				Log.e("bbb", stat + "");
+				if (!stat) {
+					factory.finish();					
+				} else {
+					algo.set(index);
+				}
+
+			};
+		});
 
 		pOnCreateSceneCallback.onCreateSceneFinished(scene);
 	}
