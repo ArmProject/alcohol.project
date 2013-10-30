@@ -30,12 +30,12 @@ public class Book extends Activity  {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.activity_book);
 		ImageButton yourBitmap = (ImageButton) findViewById(R.id.plus);
 		
 //		TextView test = (TextView) findViewById(R.id.)
 //		Bitmap resized = Bitmap.createScaledBitmap(yourBitmap, newWidth, newHeight, true);
-		ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.activity_list_item, myString);
+		ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.activity_book, myString);
 		ListView listView = (ListView) findViewById(R.id.testView1);
 		listView.setAdapter(adapter);
 

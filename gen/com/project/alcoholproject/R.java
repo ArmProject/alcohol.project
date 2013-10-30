@@ -21,16 +21,53 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int alcohol=0x7f020000;
+        public static final int bk_main=0x7f020001;
+        public static final int book=0x7f020002;
+        public static final int face_1=0x7f020003;
+        public static final int face_2=0x7f020004;
+        public static final int face_3=0x7f020005;
+        public static final int face_4=0x7f020006;
+        public static final int four=0x7f020007;
+        public static final int ic_launcher=0x7f020008;
+        public static final int one=0x7f020009;
+        public static final int pic_bk_main=0x7f02000a;
+        public static final int plus=0x7f02000b;
+        public static final int three=0x7f02000c;
+        public static final int two=0x7f02000d;
     }
     public static final class id {
-        public static final int action_settings=0x7f080000;
+        public static final int FrameLayout1=0x7f080000;
+        public static final int action_settings=0x7f080014;
+        public static final int editText1=0x7f080003;
+        public static final int editText2=0x7f080005;
+        public static final int editText3=0x7f080007;
+        public static final int editText4=0x7f080009;
+        public static final int editText5=0x7f08000b;
+        public static final int imageFace=0x7f08000e;
+        public static final int imageView2=0x7f08000f;
+        public static final int imageView3=0x7f080010;
+        public static final int imageView4=0x7f080011;
+        public static final int imageView5=0x7f080012;
+        public static final int imageView6=0x7f080013;
+        public static final int plus=0x7f08000d;
+        public static final int testView1=0x7f08000c;
+        public static final int textView1=0x7f080001;
+        public static final int textView2=0x7f080002;
+        public static final int textView3=0x7f080004;
+        public static final int textView4=0x7f080006;
+        public static final int textView5=0x7f080008;
+        public static final int textView6=0x7f08000a;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
+        public static final int activity_add_book=0x7f030000;
+        public static final int activity_book=0x7f030001;
+        public static final int activity_main=0x7f030002;
     }
     public static final class menu {
-        public static final int main=0x7f070000;
+        public static final int add_book=0x7f070000;
+        public static final int book=0x7f070001;
+        public static final int main=0x7f070002;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
