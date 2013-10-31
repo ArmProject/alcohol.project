@@ -1,8 +1,10 @@
-package com.project.alcoholproject.game;
+package com.project.alcoholproject.line;
 
 import java.util.ArrayList;
 import java.util.Random;
 
+import org.andengine.engine.handler.timer.ITimerCallback;
+import org.andengine.engine.handler.timer.TimerHandler;
 import org.andengine.entity.Entity;
 import org.andengine.entity.IEntity;
 import org.andengine.entity.primitive.Line;
@@ -28,7 +30,7 @@ import android.util.Log;
 public class PointFactory {
 	int gap = 20;
 	int size = 80;
-
+	float TIME_OUT = 30;
 	Scene scene;
 	VertexBufferObjectManager vbo;
 	Callback<Object> onTop, onFinish;
@@ -38,6 +40,8 @@ public class PointFactory {
 	float x1 = 0, y1 = 0, x2 = 0, y2 = 0;
 	Line line;
 	Rectangle start;
+	TimerHandler timer;
+	float time = 0;
 
 	public PointFactory(Scene sc) {
 		this.scene = sc;
@@ -53,6 +57,7 @@ public class PointFactory {
 					x1 = start.getX() + start.getWidth() / 2;
 					y1 = start.getY() + start.getHeight() / 2;
 					onTop.onCallback(0);
+					createTimer();
 				}
 
 				if (x1 != 0 && y1 != 0) {
@@ -98,6 +103,24 @@ public class PointFactory {
 		scene.setOnSceneTouchListener(null);
 		for (Object obj : list) {
 			scene.unregisterTouchArea((ITouchArea) obj);
+		}
+	}
+
+	private void createTimer() {
+		if (timer == null) {
+			timer = new TimerHandler(1, true, new ITimerCallback() {
+
+				@Override
+				public void onTimePassed(TimerHandler pTimerHandler) {
+					time += pTimerHandler.getTimerSeconds();
+					Log.e("aaa", time + "");
+					if (time >= TIME_OUT) {
+						finish();
+						scene.unregisterUpdateHandler(timer);
+					}
+				}
+			});
+			scene.registerUpdateHandler(timer);
 		}
 	}
 
