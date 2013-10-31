@@ -10,13 +10,17 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <FrameLayout
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1" >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
             android:weightSum="1" >
 
             <ImageView
@@ -24,56 +28,54 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="0.25"
+                android:onClick="onClickLine"
                 android:src="@drawable/one" />
 
             <ImageView
                 android:id="@+id/imageView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="0.25"
                 android:onClick="onClickFind"
                 android:src="@drawable/two" />
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="0.25"
+                android:onClick="onClickSensor"
                 android:src="@drawable/three" />
 
             <ImageView
                 android:id="@+id/imageView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_weight="0.25"
                 android:onClick="onClickSpeak"
                 android:src="@drawable/four" />
-
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|center_vertical|center_horizontal" >
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5" >
 
             <ImageView
                 android:id="@+id/imageView5"
-                android:layout_width="184dp"
-                android:layout_height="184dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
                 android:onClick="bookClick"
                 android:src="@drawable/book" />
 
             <ImageView
                 android:id="@+id/imageView6"
-                android:layout_width="184dp"
-                android:layout_height="211dp"
-                android:layout_weight="0.32"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
                 android:src="@drawable/alcohol" />
         </LinearLayout>
-
-    </FrameLayout>
+    </LinearLayout>
 
 </FrameLayout>

@@ -1,5 +1,8 @@
 package com.project.alcoholproject;
 
+import com.project.alcoholproject.line.LineActivity;
+import com.project.alcoholproject.sensor.SensorActivity;
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -42,6 +45,16 @@ public class MainActivity extends Activity {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 		builder.setMessage("Find ยังพัฒนาไม่เสร็จครับ T_T");
 		builder.show();
+	}
+	
+	public void onClickLine(View view){
+		Intent line = new Intent(this, LineActivity.class);
+		startActivity(line);
+	}
+	
+	public void onClickSensor(View view){
+		Intent sensor = new Intent(this, SensorActivity.class);
+		startActivity(sensor);
 	}
 	
 	public void onClickSpeak(View view){

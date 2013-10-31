@@ -24,7 +24,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.project.alcoholproject.game.LineActivity"
+            android:name="com.project.alcoholproject.line.LineActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape" >
+        </activity>
+                <activity
+            android:name="com.project.alcoholproject.sensor.SensorActivity"
             android:label="@string/app_name"
             android:screenOrientation="landscape" >
         </activity>
