@@ -1,4 +1,4 @@
-package com.project.alcoholproject.game;
+package com.project.alcoholproject.line;
 
 import org.andengine.opengl.font.FontFactory;
 import org.andengine.opengl.font.FontManager;

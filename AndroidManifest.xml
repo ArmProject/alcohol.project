@@ -19,7 +19,11 @@
 
         </activity>
          <activity
-            android:name="com.project.alcoholproject.game.LineActivity"
+            android:name="com.project.alcoholproject.line.LineActivity"
+            android:label="@string/app_name" >
+        </activity>
+         <activity
+            android:name="com.project.alcoholproject.sensor.SensorActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
