@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="15" />
+        android:targetSdkVersion="18" />
 
     <application
         android:allowBackup="true"
@@ -16,20 +16,25 @@
         <activity
             android:name="com.project.alcoholproject.MainActivity"
             android:label="@string/app_name" >
-
-        </activity>
-         <activity
-            android:name="com.project.alcoholproject.line.LineActivity"
-            android:label="@string/app_name" >
-        </activity>
-         <activity
-            android:name="com.project.alcoholproject.sensor.SensorActivity"
-            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.project.alcoholproject.line.LineActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.project.alcoholproject.Book"
+            android:parentActivityName="com.project.alcoholproject.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+         <activity
+            android:name="com.project.alcoholproject.AddBook"
+            android:parentActivityName="com.project.alcoholproject.Book"
+            android:label="@string/app_name" >
         </activity>
     </application>
 

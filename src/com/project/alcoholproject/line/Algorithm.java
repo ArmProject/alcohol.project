@@ -39,11 +39,7 @@ public class Algorithm {
 	}
 
 	public boolean check(int i) {
-<<<<<<< HEAD:src/com/project/alcoholproject/game/Algorithm.java
-		if (i == n - 1) {
-=======
 		if (i == d * n - 1) {
->>>>>>> 5b40d3d8cb5c8a8fc5b622ba09a9a5524afdb5b4:src/com/project/alcoholproject/line/Algorithm.java
 			isWin = true;
 		}
 		return (i == current + 1 || i == current) && !isWin;

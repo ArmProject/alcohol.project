@@ -16,7 +16,6 @@ import org.andengine.ui.activity.BaseGameActivity;
 import org.andengine.util.call.Callback;
 import org.andengine.util.color.Color;
 
-import com.project.alcoholproject.R;
 import com.project.alcoholproject.line.Algorithm;
 import com.project.alcoholproject.line.PointFactory;
 import com.project.alcoholproject.line.ResourceManager;
