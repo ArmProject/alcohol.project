@@ -1,4 +1,4 @@
-package com.project.alcoholproject.game;
+package com.project.alcoholproject.line;
 
 import org.andengine.engine.camera.Camera;
 import org.andengine.engine.options.EngineOptions;
@@ -55,7 +55,7 @@ public class LineActivity extends BaseGameActivity {
 		VertexBufferObjectManager vbo = this.getVertexBufferObjectManager();
 		Scene scene = new Scene();
 		scene.setBackground(new Background(Color.WHITE));
-
+		
 		int n = 16;
 		int d = 4;
 

@@ -1,4 +1,4 @@
-package com.project.alcoholproject.game;
+package com.project.alcoholproject.line;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -39,7 +39,7 @@ public class Algorithm {
 	}
 
 	public boolean check(int i) {
-		if (i == n - 1) {
+		if (i == d * n - 1) {
 			isWin = true;
 		}
 		return (i == current + 1 || i == current) && !isWin;
