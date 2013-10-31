@@ -38,20 +38,23 @@ public final class R {
     }
     public static final class id {
         public static final int FrameLayout1=0x7f080000;
-        public static final int action_settings=0x7f080014;
+        public static final int action_settings=0x7f080017;
+        public static final int button1=0x7f08000c;
+        public static final int button2=0x7f08000d;
         public static final int editText1=0x7f080003;
         public static final int editText2=0x7f080005;
         public static final int editText3=0x7f080007;
         public static final int editText4=0x7f080009;
         public static final int editText5=0x7f08000b;
-        public static final int imageFace=0x7f08000e;
-        public static final int imageView2=0x7f08000f;
-        public static final int imageView3=0x7f080010;
-        public static final int imageView4=0x7f080011;
-        public static final int imageView5=0x7f080012;
-        public static final int imageView6=0x7f080013;
-        public static final int plus=0x7f08000d;
-        public static final int testView1=0x7f08000c;
+        public static final int imageFace=0x7f080010;
+        public static final int imageView1=0x7f080016;
+        public static final int imageView2=0x7f080011;
+        public static final int imageView3=0x7f080012;
+        public static final int imageView4=0x7f080013;
+        public static final int imageView5=0x7f080014;
+        public static final int imageView6=0x7f080015;
+        public static final int plus=0x7f08000f;
+        public static final int testView1=0x7f08000e;
         public static final int textView1=0x7f080001;
         public static final int textView2=0x7f080002;
         public static final int textView3=0x7f080004;
@@ -63,6 +66,7 @@ public final class R {
         public static final int activity_add_book=0x7f030000;
         public static final int activity_book=0x7f030001;
         public static final int activity_main=0x7f030002;
+        public static final int list_view_form=0x7f030003;
     }
     public static final class menu {
         public static final int add_book=0x7f070000;
