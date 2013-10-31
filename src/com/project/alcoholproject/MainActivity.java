@@ -2,6 +2,7 @@ package com.project.alcoholproject;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -35,6 +36,18 @@ public class MainActivity extends Activity {
 	public void bookClick(View view){
 		Intent book = new Intent(this, Book.class);
 		startActivity(book);
+	}
+	
+	public void onClickFind(View view){
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setMessage("Find ยังพัฒนาไม่เสร็จครับ T_T");
+		builder.show();
+	}
+	
+	public void onClickSpeak(View view){
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setMessage("Speak ยังพัฒนาไม่เสร็จครับ T_T");
+		builder.show();
 	}
 
 }
